@@ -238,16 +238,12 @@ label,
 }
 
 .form-card {
-  padding: 26px;
   border-radius: 28px;
 }
 
 #formulario {
-  background: #f3f4f6;
   color: #0b1220;
-  padding: 26px;
   border-radius: 28px;
-  border: 1px solid #e5e7eb;
 }
 
 #formulario h2 {
