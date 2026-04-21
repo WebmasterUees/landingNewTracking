@@ -53,13 +53,16 @@ select {
 }
 
 .topbar {
-  position: sticky;
+ 
   top: 0;
   z-index: 50;
+   /*position: sticky;
   backdrop-filter: blur(14px);
   background: rgba(255, 255, 255, 1);
   color:  rgba(11, 18, 32, 0.88);
   border-bottom: 1px solid var(--border);
+  */
+  padding: 10px 20px;
 }
 
 .nav {
@@ -225,8 +228,9 @@ label,
 }
 
 .feature-content {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
+  */
   gap: 8px;
   align-items: center;
 }
@@ -244,6 +248,12 @@ label,
 #formulario {
   color: #0b1220;
   border-radius: 28px;
+  
+}
+
+#formulario .dm-lead-widget{
+  background: linear-gradient(160deg, rgba(255,255,255,1), rgb(255, 255, 255, 1));
+  border: 0;
 }
 
 #formulario h2 {
@@ -261,9 +271,9 @@ label,
 #formulario input,
 #formulario textarea,
 #formulario select {
-  background: white;
+  background: rgb(240, 240, 240);
   color: #0b1220;
-  border: 1px solid #d1d5db;
+  border: 1px solid #f1f1f1;
 }
 
 #formulario input::placeholder,
@@ -306,6 +316,10 @@ label,
 .textarea:focus {
   border-color: rgba(59, 130, 246, 0.6);
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.dm-lead-btn{
+  width: 100%;
 }
 
 section {
@@ -384,7 +398,7 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .nav-links {
+  .nav-links, .hide-in-movile {
     display: none;
   }
 }
@@ -399,7 +413,7 @@ section {
     z-index: 60;
     padding: 10px;
     border-radius: 18px;
-    background: rgba(17, 24, 39, 0.95);
+    /*background: rgba(17, 24, 39, 0.95);*/
     border: 1px solid var(--border);
   }
 
@@ -441,8 +455,8 @@ section {
   z-index: 100;
   width: 50px;
   height: 50px;
-  background: rgba(130, 20, 54, 0.9);
-  border: none;
+  background: rgba(130, 20, 54, 0);
+  border: 1px solid  rgba(212, 212, 212, 0.9);
   border-radius: 10px;
   cursor: pointer;
   display: flex;
@@ -561,6 +575,14 @@ body.thankyou-active {
   .thankyou-wrap p {
     text-align: left;
   }
+
+  .mobile-center{
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+
+
 }
 
 .menu-panel.active {
