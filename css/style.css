@@ -176,7 +176,7 @@ select {
 
 
 
-h1 {
+h1#programa {
   margin: 18px 0 16px;
   font-size: clamp(2.25rem, 4vw, 4.4rem);
   line-height: 1.02;
@@ -588,6 +588,10 @@ body.thankyou-active {
     display: block;
     margin: auto;
   }
+
+  h1#programa {
+  text-align: center;
+}
 
 
 }
