@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum ProgramLevel {
+  grado
+  postgrado
+}
+
+model Program {
+  id              String       @id @default(cuid())
+  level           ProgramLevel
+  slug            String
+  name            String
+  resolution      String?
+  backgroundImage String?
+  degreeTitle     String?
+  doubleDegree    String?
+  description     String?      @db.Text
+  metaDescription String?      @db.Text
+  modality        String?
+  duration        String?
+  websiteUrl      String?
+  brochureUrl     String?
+  gtmPixel        String?
+  headingTitle    String?
+  titleLogoImage  String?
+  isActive        Boolean      @default(true)
+  sortOrder       Int          @default(1000)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@unique([level, slug])
+  @@index([level, isActive])
+}

@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Solo para el dominio viejo
+RewriteCond %{HTTP_HOST} ^(www\.)?online\.uees\.edu\.ec$ [NC]
+
+# /informacion/grado/<slug> -> nuevo /grado/<slug>
+RewriteRule ^grado/([a-z0-9-]+)/?$ https://informacion.uees.edu.ec/grado/$1 [R=301,L,NC]
+
+# /informacion/postgrado/<slug> -> nuevo /postgrado/<slug>
+RewriteRule ^postgrado/([a-z0-9-]+)/?$ https://informacion.uees.edu.ec/postgrado/$1 [R=301,L,NC]
+
+# /informacion/<slug> (legacy viejo) -> nuevo /grado/<slug>
+RewriteRule ^([a-z0-9-]+)/?$ https://informacion.uees.edu.ec/grado/$1 [R=301,L,NC]
+
+# /informacion o /informacion/ -> nuevo /grado
+RewriteRule ^$ https://informacion.uees.edu.ec/grado [R=301,L,NC]
